@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+__pycache__
+*.pyc
+**/migrations/*
+settings_local*.py
+media
+static_root
+logs
+
