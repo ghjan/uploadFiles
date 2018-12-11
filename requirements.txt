@@ -1,0 +1,5 @@
+django<2.0                 # Django 1.11 is designated as a long-term support release
+
+pymysql>=0.7.11
+
+

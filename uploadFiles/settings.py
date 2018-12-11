@@ -82,6 +82,11 @@ DATABASES = {
     }
 }
 '''
+
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -128,12 +133,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'common_static'),
 )
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticRoot')
 if DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticRoot')
 else:
     STATIC_ROOT = '/data/media/uploadfiles/static/'
 
